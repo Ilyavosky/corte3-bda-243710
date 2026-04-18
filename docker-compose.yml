@@ -15,6 +15,7 @@ services:
       - ./migrations/04_triggers.sql:/docker-entrypoint-initdb.d/04_triggers.sql
       - ./migrations/05_views.sql:/docker-entrypoint-initdb.d/05_views.sql
       - ./migrations/06_rls.sql:/docker-entrypoint-initdb.d/06_rls.sql
+      - ./migrations/07_grants.sql:/docker-entrypoint-initdb.d/07_grants.sql
 
   redis:
     image: redis:7
