@@ -1,4 +1,6 @@
-const rol    = sessionStorage.getItem('rol') || 'rol_administrador';
+const sesionRol = sessionStorage.getItem("rol");
+  if (!sesionRol) { window.location.href = "login.html"; }
+  const rol    = sessionStorage.getItem('rol') || 'rol_administrador';
   const vet_id = parseInt(sessionStorage.getItem('vet_id')) || 0;
 
   document.getElementById('session-badge').textContent = rol.replace('rol_', '').toUpperCase() + (vet_id ? ` #${vet_id}` : '');

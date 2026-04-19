@@ -15,14 +15,14 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Centro Pokémon, la Veterinaria para tus mascotas",
-    description="API para el sistema de clínica veterinaria con temática Pokémon",
+    description="API para el sistema de clínica veterinaria",
     version="1.0.0",
     lifespan=lifespan
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:5500"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://127.0.0.1:5500"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
